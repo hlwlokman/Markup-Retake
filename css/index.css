@@ -1,0 +1,318 @@
+* {
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background-color: #66d96963;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+	font-size: 1em;
+	color: #FA0;
+}
+
+a:hover {
+	color: #FFC72B; /* cmyk(0, 22, 83, 0) for color Pantome 123C with CMYK property is a suggested standard for CSS4, now only CSS3 is used */
+}
+
+header {
+	background-color: #fa0;
+}
+
+header img {
+	width:200px;
+}
+
+header h1 {
+	background-color: #777;
+	font-size: 1.5em;
+	padding: 2px;
+}
+
+header h2 {
+	background-color: #AAA;
+	font-size: 1.2em;
+	padding: 2px;
+}
+
+h6, .figure-toggle {
+	display: none;
+}
+
+.hamburgermenu {
+	display: none;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+footer {
+	background-color: #F00;
+	color: #321;
+	font-family: Notable;
+	margin: 12px;
+	padding: 5px;
+	height: 50px;
+	font-weight: normal;
+	font-size: 0.6rem;
+	border-style: double;
+	border-width: 7px;
+	border-color: #777;
+	text-indent: 2px;
+	letter-spacing: 2px;
+	word-spacing: 2px;
+	line-height: 2;
+}
+
+.navigation-items ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	background-color: #F00;
+	list-style: none;
+	height: 40px;
+	padding: 5px 3px;
+}
+
+.navigation-items a {
+	font-size: 1.2em;
+	color: #FFF;
+	text-decoration-color: #F00;
+}
+
+	.navigation-items a:hover {
+		background-color: #000;
+		text-decoration: none;
+	}
+
+.navigation-items a:active {
+	background-color: initial;
+	color: #000;
+	text-decoration-color: #F00;
+}
+
+aside {
+	flex-grow: 0;
+	flex-shrink: 0;
+	flex-basis: 200px;
+	background-color: #AAA;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 5px;
+	z-index: 0;
+	order: 3;
+}
+
+aside ol {
+	display: flex;
+	flex-direction: column;
+}
+
+aside li {
+	font-size: 0.9em;
+	margin: 10%;
+}
+
+main {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap-reverse;
+}
+
+article {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 45%;
+	order: 1;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #777;
+	border-radius: 10px;
+	padding: 5px;
+	margin: 5px;
+}
+
+section header {
+	background-color : transparent;
+	color: #FA0;
+	font-weight: bold;
+	font-size: 0.9em;
+	text-transform: uppercase;
+}
+
+section footer {
+	background-color : transparent;
+	font-family: inherit;
+	color: lightgrey;
+	font-weight: bold;
+	font-size: 0.8em;
+	height: auto;
+	border-style: none;
+}
+
+.section-spacer {
+	display: none;
+	flex-grow: 1;
+	flex-shrink: 1;
+	background-color: #000;
+	order: 2;
+}
+
+section figcaption {
+	font-size: 0.7em;
+	padding: 5px;
+}
+
+section p {
+	color: white;
+	font-size: 0.9em;
+}
+
+.section-align-image {
+	flex-direction: row;
+}
+
+.section-image-float-other {
+	display: block;
+	float: right;
+}
+
+.section-image-float-mobile {
+	display: none;
+}
+
+.section-video {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	background-color: black;
+	width: 100%;
+	order: 4;
+}
+
+.cookie {
+	width: 80px;
+	height: 50px;
+	color: #FFF;
+	opacity: 50%;
+	background-color: #FA0;
+	font-size: 1em;
+	position: fixed;
+	right: 45px;
+	bottom: 20px;
+	border-radius: 5px;
+	text-align: left;
+	vertical-align: middle;
+	line-height: 1.5;
+	padding: 4px;
+	z-index: 9999;
+}
+
+video {
+	max-width: 45%;
+}
+
+
+/*-- MOBILE --*/
+@media screen and (max-width: 480px) {
+	header img {
+		display: none;
+	}
+
+	.hamburgermenu {
+		display: block;
+	}
+	
+	.navigation-items ul {
+		display: none;
+	}
+
+	.navigation-items:hover ul {
+		display: block;
+		background-color: #F00;
+		position: absolute;
+		top: 10px;
+		right: 25px;
+		margin: 20px;
+		padding: 20px;
+		border-radius: 5px;
+		border-style: solid;
+		border-color: #FA0;
+		border-width: 5px;
+		z-index: 10000;
+	}
+
+	.section-video {
+		display: none;
+	}
+
+	article {
+		flex-direction: column-reverse;
+	}
+
+	.section-align-image {
+		flex-direction: column;
+	}
+
+	.section-image-float-mobile {
+		display: block;
+		margin: auto;
+	}
+	
+	.section-image-float-other {
+		display: none;
+	}
+}
+
+
+/*-- TABLET --*/
+@media screen and (min-width: 481px) and (max-width: 1280px) {	
+	header img {
+		width:150px;
+	}
+
+	article {
+		flex-direction: column-reverse;
+	}
+	
+	.section-align-image {
+		flex-direction: row-reverse;
+	}
+	
+	.section-video {
+		order: 3;
+	}
+	
+	aside {
+		order: 4;
+	}	
+
+	.section-image-float-mobile {
+		display: none;
+	}
+
+	.section-image-float-other {
+		float: left;
+	}
+}
+
+
+/*-- PC --*/
+@media screen and (min-width: 1281px) {
+	.section-spacer {
+		display: block;
+	}
+
+	.section-image-float-mobile {
+		display: none;
+	}
+}
